@@ -1,16 +1,14 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom';
-import Logo  from "../../assets/images/Logo.png"
-import CountryDropdown from '../CountryDropdown';
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import Logo from "../../assets/images/Logo.png";
+import CountryDropdown from "../CountryDropdown";
 
 import Button from "@mui/material/Button";
-import {FiUser} from 'react-icons/fi'
-import {IoBagOutline} from 'react-icons/io5';
-import SearchBox from './SearchBox';
-import Navigation from '../Navigation';
-import { MyContext } from '../../App';
-
-
+import { FiUser } from "react-icons/fi";
+import { IoBagOutline } from "react-icons/io5";
+import SearchBox from "./SearchBox";
+import Navigation from "../Navigation";
+import { MyContext } from "../../App";
 
 const Header = () => {
   const context = useContext(MyContext);
@@ -64,6 +62,6 @@ const Header = () => {
       </div>
     </>
   );
-}
+};
 
-export default Header
+export default Header;

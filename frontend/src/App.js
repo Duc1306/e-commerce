@@ -1,28 +1,26 @@
-import React, { createContext, useEffect, useState } from 'react'
-import "./App.css"
-import "bootstrap/dist/css/bootstrap.min.css"
-import { BrowserRouter, Route,  Routes } from 'react-router-dom';
-import Home from './Pages/Home';
-import Header from './Components/Header';
-import axios from 'axios';
+import React, { createContext, useEffect, useState } from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
+import Header from "./Components/Header";
+import axios from "axios";
 
+const MyContext = createContext();
 
-const MyContext = createContext()
-
-function  App() {
-  const[countryList,setCountryList] = useState([]);
-   const [selectedCountry, setselectedCountry] = useState('');
+function App() {
+  const [countryList, setCountryList] = useState([]);
+  const [selectedCountry, setselectedCountry] = useState("");
 
   useEffect(() => {
     getCountry("https://open.oapi.vn/location/countries");
-  },[]);
+  }, []);
 
-  const getCountry =async(url) =>{
-    const responsive = await axios.get(url).then((res) =>{
+  const getCountry = async (url) => {
+    const responsive = await axios.get(url).then((res) => {
       setCountryList(res.data.data);
-      
-    })
-  }
+    });
+  };
   const values = {
     countryList,
     setselectedCountry,
@@ -41,4 +39,4 @@ function  App() {
 }
 
 export default App;
-export {MyContext}
+export { MyContext };

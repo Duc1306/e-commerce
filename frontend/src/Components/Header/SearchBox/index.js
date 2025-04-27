@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { IoIosSearch } from "react-icons/io";
 import Button from "@mui/material/Button";
 const SearchBox = () => {
@@ -12,6 +12,6 @@ const SearchBox = () => {
       </div>
     </>
   );
-}
+};
 
-export default SearchBox
+export default SearchBox;

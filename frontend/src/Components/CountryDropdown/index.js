@@ -15,11 +15,10 @@ const CountryDropdown = () => {
   const [selectedTab, setselectedTab] = useState(null);
 
   const [countryList, setcountryList] = useState([]);
- 
 
   const context = useContext(MyContext);
 
-  const selectCountry = (index,name) => {
+  const selectCountry = (index, name) => {
     setselectedTab(index);
     setisOpenModal(false);
     context.setselectedCountry(name);
@@ -50,9 +49,9 @@ const CountryDropdown = () => {
           <span className="name">
             {context.selectedCountry !== ""
               ? context.selectedCountry.length > 10
-                ? context.selectedCountry?.substr(0, 10)+"..."
+                ? context.selectedCountry?.substr(0, 10) + "..."
                 : context.selectedCountry
-                : "Select Location"}
+              : "Select Location"}
           </span>
         </div>
         <span className="ml-auto">
