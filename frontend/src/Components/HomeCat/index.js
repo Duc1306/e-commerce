@@ -4,27 +4,26 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 const HomeCat = () => {
-
-    const [itemBg, setItemBg] = useState([
-      "#fffecb",
-      "#ecffec",
-      "#feefea",
-      "#fff3eb",
-      "#fff3ff",
-      "#f2fce4",
-      "#feefea",
-      "#fff3eb",
-      "#feefea",
-      "#ecffec",
-      "#feefea",
-      "#fffecb",
-      "#fff3ff",
-      "#f2fce4",
-      "#feefea",
-      "#fff3eb",
-      "#feefea",
-      "#ecffec",
-    ]);
+  const [itemBg, setItemBg] = useState([
+    "#fffecb",
+    "#ecffec",
+    "#feefea",
+    "#fff3eb",
+    "#fff3ff",
+    "#f2fce4",
+    "#feefea",
+    "#fff3eb",
+    "#feefea",
+    "#ecffec",
+    "#feefea",
+    "#fffecb",
+    "#fff3ff",
+    "#f2fce4",
+    "#feefea",
+    "#fff3eb",
+    "#feefea",
+    "#ecffec",
+  ]);
   return (
     <section className="homeCat">
       <div className="container">

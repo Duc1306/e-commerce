@@ -12,7 +12,6 @@ body {
   overflow-x: hidden;
 }
 
-
 .bg-blue {
   background: #233a95;
 }
@@ -394,7 +393,7 @@ nav .navPart2 ul li:hover .submenu {
   /* hủy background-image mặc định của Swiper */
   background-image: none !important;
 }
-.swiper-button-next{
+.swiper-button-next {
   right: 2%;
   position: absolute;
   top: 45%;
@@ -408,11 +407,13 @@ nav .navPart2 ul li:hover .submenu {
   border-radius: 100%;
   font-family: FontAwesome !important;
   font-weight: bold;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 12%) , 0 1px 2px rgb(0 0 0 / 24%) !important ;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%) !important ;
 }
 
-.swiper-button-prev{
-  left: 2% !important; position: absolute; top: 45%;
+.swiper-button-prev {
+  left: 2% !important;
+  position: absolute;
+  top: 45%;
   z-index: 100;
   display: flex;
   align-items: center;
@@ -423,18 +424,18 @@ nav .navPart2 ul li:hover .submenu {
   border-radius: 100%;
   font-family: FontAwesome !important;
   font-weight: bold;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 12%) , 0 1px 2px rgb(0 0 0 / 24%) !important ;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%) !important ;
 }
 
 .swiper-button-next::after {
-  content: '>';           /* hiển thị ký tự > */
+  content: ">"; /* hiển thị ký tự > */
   font-size: 18px !important;
   color: #000 !important;
   opacity: 0.8 !important;
   line-height: 1 !important;
 }
 .swiper-button-prev::after {
-  content: '<';           /* hiển thị ký tự < */
+  content: "<"; /* hiển thị ký tự < */
   font-size: 18px !important;
   color: #000 !important;
   opacity: 0.8 !important;
@@ -535,7 +536,7 @@ nav .navPart2 ul li:hover .submenu {
   border-radius: 50% !important;
   background: #fff !important;
   box-shadow: 0 1px 3px rgb(0 0 0 / 12%), 0 1px 2px rgb(0 0 0 / 24%) !important;
-  transition: all 0.0s !important;
+  transition: all 0s !important;
 }
 .productItem .actions button:hover {
   background: #233a95 !important;
@@ -570,27 +571,132 @@ nav .navPart2 ul li:hover .submenu {
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
 
-.product_row .swiper-button-prev{left: 0px !important;}
-.product_row .swiper-button-next{right: 0px !important;}
-
+.product_row .swiper-button-prev {
+  left: 0px !important;
+}
+.product_row .swiper-button-next {
+  right: 0px !important;
+}
 
 .swiper {
-  padding-right:2px !important;
+  padding-right: 2px !important;
 }
 
 .badge .pimary {
   background: #2bbef9 !important;
 }
-.homeCat{padding: 35px 0px;}
-.homeCat .swiper {overflow: inherit !important;}
-.homeCat .swiper .item{padding: 15px; width: 100%; height: auto;border-radius: 10px;}
-.homeCat .swiper .item img{width: 80%;}
-.homeCat .swiper-button-prev,.homeCat .swiper-button-next{top:-30px !important; width: 30px !important; height: 30px !important;}
-.homeCat .swiper-button-prev{right: 68px !important; left: inherit !important;}
-.homeCat .swiper-button-prev::after,.homeCat .swiper-button-next::after{font-size: 12px !important;}
+.homeCat {
+  padding: 35px 0px;
+}
+.homeCat .swiper {
+  overflow: inherit !important;
+}
+.homeCat .swiper .item {
+  padding: 15px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.homeCat .swiper .item img {
+  width: 80%;
+}
+.homeCat .swiper-button-prev,
+.homeCat .swiper-button-next {
+  top: -30px !important;
+  width: 30px !important;
+  height: 30px !important;
+}
+.homeCat .swiper-button-prev {
+  right: 68px !important;
+  left: inherit !important;
+}
+.homeCat .swiper-button-prev::after,
+.homeCat .swiper-button-next::after {
+  font-size: 12px !important;
+}
 
-.productRow2{flex-wrap: wrap;gap: 10px;}
-.productRow2 .productItem{width: 24%; overflow: hidden; border-right: 1px solid rgba(0, 0, 0, 0.1) !important;}
+.productRow2 {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.productRow2 .productItem {
+  width: 24%;
+  overflow: hidden;
+  border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
 
-.bannerSec{gap:15px;}
-.sticky{position: sticky;top: 10px; z-index: 100;}
+.bannerSec {
+  gap: 15px;
+}
+.sticky {
+  position: sticky;
+  top: 10px;
+  z-index: 100;
+}
+
+.newsLetterSection {
+  width: 100%;
+  height: auto;
+  background: #233a95;
+  position: relative;
+  overflow: hidden;
+  padding: 70px 0px;
+}
+.newsLetterSection p {
+  font-size: 18px;
+  margin: 10px 0px !important;
+}
+.newsLetterSection h3 {
+  font-size: 35px;
+  font-weight: bold;
+}
+.newsLetterSection p.text-light {
+  color: #fff !important;
+  opacity: 0.5;
+  font-size: 15px;
+}
+.newsLetterSection img {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+.newsLetterSection .col-md-6 {
+  position: static !important;
+}
+
+.newsLetterSection form {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  padding: 10px;
+  position: relative;
+  border-radius: 5px;
+}
+.newsLetterSection form svg {
+  position: absolute;
+  top: 17px;
+  left: 10px;
+  font-size: 25px;
+  opacity: 0.3;
+}
+.newsLetterSection form input {
+  width: 100%;
+  height: 100%;
+  background: #fff !important;
+  outline: none !important;
+  border: 0px !important;
+  padding-left: 40px;
+  padding-right: 200px;
+}
+
+.newsLetterSection form button {
+  position: absolute;
+  top: 6px;
+  right: 7px;
+  background: #233a95 !important;
+  font-size: 14px !important;
+  padding: 12px 25px !important;
+  color: #fff !important;
+  text-transform: capitalize !important;
+  font-weight: 600 !important;
+}

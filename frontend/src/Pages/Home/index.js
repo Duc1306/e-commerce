@@ -4,6 +4,7 @@ import banner1 from "../../assets/images/banner1.jpg";
 import banner2 from "../../assets/images/banner2.jpg";
 import banner3 from "../../assets/images/banner3.jpg";
 import banner4 from "../../assets/images/banner4.jpg";
+import coupon  from "../../assets/images/coupon.png";
 import Button from "@mui/material/Button";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,6 +14,7 @@ import { Navigation } from "swiper/modules";
 
 import ProductItem from "../../Components/ProductItem/ProductItem";
 import HomeCat from "../../Components/HomeCat";
+import {IoMailOutline} from "react-icons/io5"
 
 const Home = () => {
   // var productSliderOptions = {
@@ -25,9 +27,7 @@ const Home = () => {
   return (
     <>
       <HomeBanner />
-
       <HomeCat />
-
       <section className="homeProducts">
         <div className="container">
           <div className="row">
@@ -122,6 +122,35 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section className="newsLetterSection mt-3 mb-3 d-flex align-items-center">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <p className="text-white mb-1">
+                $20 discount for your first order
+              </p>
+              <h3 className="text-white">
+                Join our newsLetterSection and get...
+              </h3>
+              <p className="text-light">
+                Join our email subscription now to getupdates
+                <br /> on promotions and coupons.
+              </p>
+
+              <form>
+                <IoMailOutline />
+                <input type="text" placeholder="Your Email Adderss" />
+                <Button>Subscribe</Button>
+              </form>
+            </div>
+
+            <div className="col-md-6">
+              <img src={coupon} />
+            </div>
+          </div>
+        </div>
+      </section>
+      <br /> <br /> <br /> <br /> <br />
     </>
   );
 };
