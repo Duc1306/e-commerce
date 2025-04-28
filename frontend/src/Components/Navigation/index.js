@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 import { IoIosMenu } from "react-icons/io";
 import { FaAngleDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { FaAngleRight } from "react-icons/fa6";
 
 const Navigation = () => {
   const [isOpenSidebarVal, setisOpenSidebarVal] = useState(false);
@@ -32,18 +33,66 @@ const Navigation = () => {
                 <ul>
                   <li>
                     <Link to="/">
-                      <Button>men</Button>
+                      <Button>
+                        men
+                        <FaAngleRight className="ml-auto" />
+                      </Button>
                     </Link>
+                    <div className="submenu">
+                      <Link to="/">
+                        <Button>clothing</Button>
+                      </Link>
+                      <Link to="/">
+                        <Button>footwear</Button>
+                      </Link>
+                      <Link to="/">
+                        <Button>watches</Button>
+                      </Link>
+                      <Link to="/">
+                        <Button>clothing</Button>
+                      </Link>
+                    </div>
                   </li>
                   <li>
                     <Link to="/">
-                      <Button>women</Button>
+                      <Button>
+                        women
+                        <FaAngleRight className="ml-auto" />
+                      </Button>
                     </Link>
+                    <div className="submenu shadow">
+                      <Link to="/">
+                        <Button>clothing</Button>
+                      </Link>
+                      <Link to="/">
+                        <Button>footwear</Button>
+                      </Link>
+                      <Link to="/">
+                        <Button>watches</Button>
+                      </Link>
+                      <Link to="/">
+                        <Button>clothing</Button>
+                      </Link>
+                    </div>
                   </li>
                   <li>
                     <Link to="/">
                       <Button>beauty</Button>
                     </Link>
+                    <div className="submenu shadow">
+                      <Link to="/">
+                        <Button>clothing</Button>
+                      </Link>
+                      <Link to="/">
+                        <Button>footwear</Button>
+                      </Link>
+                      <Link to="/">
+                        <Button>watches</Button>
+                      </Link>
+                      <Link to="/">
+                        <Button>clothing</Button>
+                      </Link>
+                    </div>
                   </li>
                   <li>
                     <Link to="/">
@@ -95,11 +144,39 @@ const Navigation = () => {
                 <Link to="/">
                   <Button>women</Button>
                 </Link>
+                <div className="submenu shadow">
+                  <Link to="/">
+                    <Button>clothing</Button>
+                  </Link>
+                  <Link to="/">
+                    <Button>footwear</Button>
+                  </Link>
+                  <Link to="/">
+                    <Button>watches</Button>
+                  </Link>
+                  <Link to="/">
+                    <Button>clothing</Button>
+                  </Link>
+                </div>
               </li>
               <li className="list-inline-item">
                 <Link to="/">
                   <Button>beauty</Button>
                 </Link>
+                <div className="submenu shadow">
+                  <Link to="/">
+                    <Button>clothing</Button>
+                  </Link>
+                  <Link to="/">
+                    <Button>footwear</Button>
+                  </Link>
+                  <Link to="/">
+                    <Button>watches</Button>
+                  </Link>
+                  <Link to="/">
+                    <Button>clothing</Button>
+                  </Link>
+                </div>
               </li>
               <li className="list-inline-item">
                 <Link to="/">

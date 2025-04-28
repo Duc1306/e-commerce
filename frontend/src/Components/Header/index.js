@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/images/Logo.png";
+import logo from "../../assets/images/logo.jpg";
 import CountryDropdown from "../CountryDropdown";
 
 import Button from "@mui/material/Button";
@@ -17,9 +17,9 @@ const Header = () => {
       <div className="headerWrapper">
         <div className="top-strip bg-blue">
           <div className="container">
-            <p className="mb-0 mt-0 text-center">
-              <b> チン。ミン。ドゥック。</b>
-            </p>
+            <div className="mb-0 mt-0 text-center">
+              <h5> チン。ミン。ドゥック。</h5>
+            </div>
           </div>
         </div>
 
@@ -28,7 +28,7 @@ const Header = () => {
             <div className="row">
               <div className="logoWrapper d-flex align-items-center col-sm-2">
                 <Link to={"/"}>
-                  <img src={Logo} alt="Logo" />
+                  <img src={logo} alt="Logo" />
                 </Link>
               </div>
 
