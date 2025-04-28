@@ -16,6 +16,7 @@ import ProductItem from "../../Components/ProductItem/ProductItem";
 import HomeCat from "../../Components/HomeCat";
 import {IoMailOutline} from "react-icons/io5"
 
+
 const Home = () => {
   // var productSliderOptions = {
   //   dots: true,
@@ -150,7 +151,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <br /> <br /> <br /> <br /> <br />
+      
+
+      
     </>
   );
 };

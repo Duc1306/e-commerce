@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import Header from "./Components/Header";
 import axios from "axios";
+import Footer from "./Components/Footer";
 
 const MyContext = createContext();
 
@@ -18,6 +19,7 @@ function App() {
 
   const getCountry = async (url) => {
     const responsive = await axios.get(url).then((res) => {
+      console.log(res.data.data);
       setCountryList(res.data.data);
     });
   };
@@ -33,6 +35,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
+        <Footer/>
       </MyContext.Provider>
     </BrowserRouter>
   );
