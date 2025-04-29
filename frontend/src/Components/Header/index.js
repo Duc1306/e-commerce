@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 import { FiUser } from "react-icons/fi";
 import { IoBagOutline } from "react-icons/io5";
 import SearchBox from "./SearchBox";
-import Navigation from "../Navigation";
+import Navigation from "./Navigation";
 import { MyContext } from "../../App";
 
 const Header = () => {

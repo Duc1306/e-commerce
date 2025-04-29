@@ -1,12 +1,12 @@
-import React from 'react'
-import {LuShirt} from "react-icons/lu"
-import {TbTruckDelivery} from "react-icons/tb"
-import {TbDiscount} from "react-icons/tb"
-import {CiBadgeDollar} from "react-icons/ci"
-import { Link } from 'react-router-dom'
-import {FaFacebookF} from "react-icons/fa"
-import { FaTwitter } from 'react-icons/fa'
-import { FaInstagram } from 'react-icons/fa'
+import React from "react";
+import { LuShirt } from "react-icons/lu";
+import { TbTruckDelivery } from "react-icons/tb";
+import { TbDiscount } from "react-icons/tb";
+import { CiBadgeDollar } from "react-icons/ci";
+import { Link } from "react-router-dom";
+import { FaFacebookF } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer>
@@ -196,6 +196,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
-export default Footer
+export default Footer;

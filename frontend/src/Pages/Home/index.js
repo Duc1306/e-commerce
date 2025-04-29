@@ -12,19 +12,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 
-import ProductItem from "../../Components/ProductItem/ProductItem";
+import ProductItem from "../../Components/ProductItem";
 import HomeCat from "../../Components/HomeCat";
 import {IoMailOutline} from "react-icons/io5"
 
 
 const Home = () => {
-  // var productSliderOptions = {
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 1,
-  // };
+
   return (
     <>
       <HomeBanner />

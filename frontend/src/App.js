@@ -6,12 +6,14 @@ import Home from "./Pages/Home";
 import Header from "./Components/Header";
 import axios from "axios";
 import Footer from "./Components/Footer";
+import ProductModal from "./Components/ProductModal";
 
 const MyContext = createContext();
 
 function App() {
   const [countryList, setCountryList] = useState([]);
   const [selectedCountry, setselectedCountry] = useState("");
+  const [isOpenProductModal, setisOpenProductModal] = useState(false);
 
   useEffect(() => {
     getCountry("https://open.oapi.vn/location/countries");
@@ -27,6 +29,8 @@ function App() {
     countryList,
     setselectedCountry,
     selectedCountry,
+    isOpenProductModal, 
+    setisOpenProductModal,
   };
   return (
     <BrowserRouter>
@@ -35,7 +39,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
-        <Footer/>
+        <Footer />
+
+        {isOpenProductModal === true && (
+          <ProductModal  />
+        )}
       </MyContext.Provider>
     </BrowserRouter>
   );
