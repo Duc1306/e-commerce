@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import InnerImageZoom from "react-inner-image-zoom";
 import "react-inner-image-zoom/src/styles.css";
 import QuantityBox from "../QuantityBox";
-import {IoIosHeartEmpty} from "react-icons/io"
+import { IoIosHeartEmpty } from "react-icons/io";
 import { MdOutlineCompareArrows } from "react-icons/md";
 import { MyContext } from "../../App";
 
@@ -23,7 +23,7 @@ const ProductModal = (props) => {
     slidesToShow: 5,
     slidesToScroll: 1,
     fade: false,
-    arrows: true
+    arrows: true,
   };
 
   var settings2 = {
@@ -36,18 +36,21 @@ const ProductModal = (props) => {
     arrows: false,
   };
 
-  const goto =(index) =>{
+  const goto = (index) => {
     zoomSlider.current.slickGoTo(index);
     zoomSliderBig.current.slickGoTo(index);
-  }
+  };
   return (
     <>
       <Dialog
         open={true}
         className="productModal"
-        onClose={()=>context.setisOpenProductModal(false)}
+        onClose={() => context.setisOpenProductModal(false)}
       >
-        <Button className="close_"onClick={()=>context.setisOpenProductModal(false)}>
+        <Button
+          className="close_"
+          onClick={() => context.setisOpenProductModal(false)}
+        >
           <MdClose />
         </Button>
         <h4 className="mb-1 font-weight-bold">

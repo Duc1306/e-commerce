@@ -7,13 +7,12 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { MyContext } from "../../App";
 
 const ProductItem = () => {
+  const context = useContext(MyContext);
 
-  const context = useContext(MyContext)
+  const viewProductDetails = (id) => {
+    context.setisOpenProductModal(true);
+  };
 
-  const viewProductDetails=(id) =>{
-    context.setisOpenProductModal(true)
-  }
- 
   return (
     <>
       <div className="item productItem">
@@ -52,8 +51,6 @@ const ProductItem = () => {
           </div>
         </div>
       </div>
-
-     
     </>
   );
 };

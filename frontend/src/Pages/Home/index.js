@@ -4,21 +4,18 @@ import banner1 from "../../assets/images/banner1.jpg";
 import banner2 from "../../assets/images/banner2.jpg";
 import banner3 from "../../assets/images/banner3.jpg";
 import banner4 from "../../assets/images/banner4.jpg";
-import coupon  from "../../assets/images/coupon.png";
+import coupon from "../../assets/images/coupon.png";
 import Button from "@mui/material/Button";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-
 import ProductItem from "../../Components/ProductItem";
 import HomeCat from "../../Components/HomeCat";
-import {IoMailOutline} from "react-icons/io5"
-
+import { IoMailOutline } from "react-icons/io5";
 
 const Home = () => {
-
   return (
     <>
       <HomeBanner />
@@ -145,9 +142,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
-
-      
     </>
   );
 };

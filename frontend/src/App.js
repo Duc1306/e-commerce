@@ -29,7 +29,7 @@ function App() {
     countryList,
     setselectedCountry,
     selectedCountry,
-    isOpenProductModal, 
+    isOpenProductModal,
     setisOpenProductModal,
   };
   return (
@@ -41,9 +41,7 @@ function App() {
         </Routes>
         <Footer />
 
-        {isOpenProductModal === true && (
-          <ProductModal  />
-        )}
+        {isOpenProductModal === true && <ProductModal />}
       </MyContext.Provider>
     </BrowserRouter>
   );
