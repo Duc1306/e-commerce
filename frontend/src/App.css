@@ -302,7 +302,7 @@ nav .navPart1 .catWrapper .sidebarNav ul li button:hover {
 }
 
 nav .navPart1 .catWrapper .sidebarNav ul li button:first-child {
-  color: #7a55c1 !important;
+  /* color: #7a55c1 !important; */
 }
 
 nav .navPart1 .catWrapper .sidebarNav ul li {
@@ -352,6 +352,7 @@ nav .allCatTab:hover {
 }
 nav .allCatTab .text {
   font-weight: 600;
+  white-space: nowrap;
 }
 nav .allCatTab .icon1 svg {
   font-size: 20px !important;
@@ -440,11 +441,11 @@ nav .navPart2 ul li:hover .submenu {
   outline: none !important;
 }
 
-.swiper-button-next,
+/* .swiper-button-next,
 .swiper-button-prev {
-  /* hủy background-image mặc định của Swiper */
+
   background-image: none !important;
-}
+} */
 .swiper-button-next {
   right: 3%;
   position: absolute;
@@ -858,10 +859,6 @@ footer .copyright ul li a:hover svg {
   padding-top: 30px;
 }
 
-.zoomSlider .slick-slide {
-  padding-right: 20px !important;
-}
-
 .zoomSlider * {
   outline: none !important;
 }
@@ -872,21 +869,19 @@ footer .copyright ul li a:hover svg {
   border-radius: 15px;
   cursor: pointer;
 }
-
-.zoomSlider .slick-current .item {
-  border: 2px solid #3bb77e !important;
+.zoomSlider .item_active {
+  border: 2px solid rgba(0, 0, 0, 0.2) !important;
 }
 
-.zoomSlider .slick-arrow {
-  top: 55% !important;
-  zoom: 80% !important;
+.zoomSlider .swiper-button-prev {
+  width: 30px !important;
+  height: 30px !important;
+  top: 60% !important;
 }
-
-.zoomSlider .slick-arrow.slick-next {
-  right: -2% !important;
-}
-.zoomSlider .slick-arrow.slick-prev {
-  left: -5% !important;
+.zoomSlider .swiper-button-next {
+  width: 30px !important;
+  height: 30px !important;
+  top: 60% !important;
 }
 
 .quantityDrop {
@@ -923,4 +918,73 @@ footer .copyright ul li a:hover svg {
 
 .productModal .actions button svg {
   font-size: 15px !important;
+}
+.productModal .actions button:hover {
+  background: #f1f1f1;
+}
+.product_Listing_Page {
+  padding: 45px 0px;
+}
+.product_Listing_Page .productListing {
+  gap: 20px;
+}
+.product_Listing_Page .productListing .sidebar {
+  width: 20%;
+  flex: 0 0 20%;
+}
+.product_Listing_Page .productListing .sidebar .filterBox {
+  margin-bottom: 35px;
+}
+.product_Listing_Page .productListing .sidebar .filterBox h6 {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.product_Listing_Page .productListing .sidebar .scroll {
+  padding-left: 10px;
+  max-height: 180px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.product_Listing_Page .productListing .sidebar .scrol::-webkit-scrollbar {
+  width: 5px !important;
+  height: 5px !important;
+}
+.product_Listing_Page .productListing .sidebar .scroll ul {
+  margin-bottom: 0px;
+}
+.product_Listing_Page .productListing .sidebar .scroll ul li {
+  list-style: none;
+  margin-bottom: 0px;
+  width: 100%;
+}
+.css-imrjgg-MuiButtonBase-root-MuiCheckbox-root {
+  padding: 2px !important;
+}
+.css-rizt0-MuiTypography-root {
+  font-size: 13px !important;
+}
+.css-1umw9bq-MuiSvgIcon-root {
+  width: 20px !important;
+  height: 20px !important;
+}
+.css-imrjgg-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
+.css-imrjgg-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
+  color: #6d4aee;
+}
+.product_Listing_Page .productListing .content_right {
+  width: 80%;
+  flex: 0 0 80%;
+  padding-left: 50px;
+}
+.range-slider {
+  height: 5px !important;
+}
+.range-slider .range-slider__thumb,
+.range-slider .range-slider__range {
+  background: #6d4aee !important;
+}
+.range-slider .range-slider__thumb {
+  width: 15px !important;
+  height: 15px !important;
 }
