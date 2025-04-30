@@ -541,6 +541,13 @@ nav .navPart2 ul li:hover .submenu {
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
   position: relative;
+  transition: all 0.2s;
+  background: #fff;
+  border-radius: 10px !important;
+}
+.productItem:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border: 1px solid transparent !important;
 }
 .productItem .badge {
   display: inline-block;
@@ -560,7 +567,7 @@ nav .navPart2 ul li:hover .submenu {
 .info .oldPrice {
   font-size: 16px;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.4);
   text-decoration: line-through;
 }
 
@@ -577,13 +584,16 @@ nav .navPart2 ul li:hover .submenu {
 
 .productItem .actions {
   position: absolute;
+  width: 50px;
+  height: 100%;
   top: 20px;
-  right: -100%;
+  right: 0%;
   z-index: 1000;
   display: flex;
   flex-direction: column;
   gap: 10px;
   transition: all 0.5s ease-in-out;
+  opacity: 0;
 }
 .productItem .actions button {
   display: flex;
@@ -603,6 +613,7 @@ nav .navPart2 ul li:hover .submenu {
 }
 .productItem .actions button:hover svg {
   color: #fff !important;
+  opacity: 1 !important;
 }
 
 .productItem .actions button svg {
@@ -613,16 +624,22 @@ nav .navPart2 ul li:hover .submenu {
 }
 .productItem .imgWrapper {
   overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 .productItem .imgWrapper img {
   transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.productItem .imgWrapper:hover .actions {
+.productItem:hover .actions {
   opacity: 1;
-  right: 10px;
 }
 .productItem .imgWrapper:hover img {
-  transform: scale(1.1);
+  transform: scale(1.1) !important;
+}
+.product_row {
+  margin-left: -10px;
+  margin-right: 10px;
 }
 .product_row .productItem {
   border: 1px solid transparent !important;
@@ -630,12 +647,20 @@ nav .navPart2 ul li:hover .submenu {
 .product_row .swiper-slide:last-child .productItem {
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
+.product_row .swiper-wrapper {
+  display: flex;
+  gap: 10px;
+  padding: 5px 15px;
+}
+.product_row .swiper-slide {
+  padding: 15px 0px !important;
+}
 
 .product_row .swiper-button-prev {
-  left: 0px !important;
+  left: 10px !important;
 }
 .product_row .swiper-button-next {
-  right: 0px !important;
+  right: 10px !important;
 }
 
 .swiper {
@@ -655,10 +680,13 @@ nav .navPart2 ul li:hover .submenu {
   padding: 15px;
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
 }
 .homeCat .swiper .item img {
   width: 80%;
+}
+.homeCat .swiper .item:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .homeCat .swiper-button-prev,
 .homeCat .swiper-button-next {
@@ -701,7 +729,7 @@ nav .navPart2 ul li:hover .submenu {
 
   position: relative;
   overflow: hidden;
-  padding: 70px 0px;
+  padding: 60px 0px;
 }
 .newsLetterSection p {
   font-size: 18px;
@@ -726,7 +754,7 @@ nav .navPart2 ul li:hover .submenu {
 }
 
 .newsLetterSection form {
-  width: 100%;
+  width: 80%;
   height: 60px;
   background: #fff;
   padding: 10px;
@@ -804,6 +832,7 @@ footer .linksWrap ul li a {
 }
 footer .linksWrap ul li a:hover {
   text-decoration: none;
+  color: #000;
 }
 
 footer .copyright ul li a {
@@ -932,6 +961,7 @@ footer .copyright ul li a:hover svg {
   width: 20%;
   flex: 0 0 20%;
 }
+
 .product_Listing_Page .productListing .sidebar .filterBox {
   margin-bottom: 35px;
 }
@@ -970,13 +1000,9 @@ footer .copyright ul li a:hover svg {
 }
 .css-imrjgg-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
 .css-imrjgg-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
-  color: #6d4aee;
+  color: #6d4aee !important;
 }
-.product_Listing_Page .productListing .content_right {
-  width: 80%;
-  flex: 0 0 80%;
-  padding-left: 50px;
-}
+
 .range-slider {
   height: 5px !important;
 }
@@ -987,4 +1013,99 @@ footer .copyright ul li a:hover svg {
 .range-slider .range-slider__thumb {
   width: 15px !important;
   height: 15px !important;
+}
+
+.product_Listing_Page .productListing .content_right {
+  width: 78%;
+  flex: 0 0 78%;
+  padding-left: 50px;
+}
+
+.product_Listing_Page .productListing .content_right .showBy {
+  width: 100%;
+  height: auto;
+  background: #f1f3ff;
+  padding: 15px 25px;
+}
+.product_Listing_Page
+  .productListing
+  .content_right
+  .showBy
+  .btnWrapper
+  button {
+  min-width: 35px !important;
+  height: 35px !important;
+  width: 35px !important;
+  border-radius: 50% !important;
+  color: #000;
+}
+.product_Listing_Page
+  .productListing
+  .content_right
+  .showBy
+  .btnWrapper
+  button
+  svg {
+  color: #000;
+  font-size: 18px !important;
+  opacity: 0.3;
+}
+.product_Listing_Page
+  .productListing
+  .content_right
+  .showBy
+  .btnWrapper
+  button.act
+  svg {
+  opacity: 1 !important;
+}
+
+.product_Listing_Page
+  .productListing
+  .content_right
+  .showBy
+  .btnWrapper
+  button:hover
+  svg {
+  opacity: 1;
+}
+
+.showByFilter button {
+  min-width: auto !important;
+  color: #000;
+}
+.showByFilter button.act svg {
+  opacity: 1 !important;
+}
+.showByFilter button svg {
+  color: #000;
+  opacity: 0.6;
+  margin-left: 5px;
+}
+.showPerPageDropdown {
+  width: 80px !important;
+}
+
+.productListing {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.productListing .productItem.four {
+  width: 23%;
+}
+.productListing .productItem.three {
+  width: 31.5%;
+}
+.productListing .productItem.two {
+  width: 48%;
+}
+.productListing .productItem.one {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.productListing .productItem.one .imgWrapper {
+  width: 25%;
 }

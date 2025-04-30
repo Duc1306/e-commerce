@@ -6,7 +6,7 @@ import { IoMdHeartEmpty } from "react-icons/io";
 
 import { MyContext } from "../../App";
 
-const ProductItem = () => {
+const ProductItem = (props) => {
   const context = useContext(MyContext);
 
   const viewProductDetails = (id) => {
@@ -15,7 +15,7 @@ const ProductItem = () => {
 
   return (
     <>
-      <div className="item productItem">
+      <div className={`productItem ${props.itemView}`}>
         <div className="imgWrapper">
           <img
             src="https://api.spicezgold.com/download/file_1734527098974_poco-c61-4gb-ram-64gb-rom-ethereal-blue-smartphone-product-images-orvmh0bwivm-p608625324-1-202403291512.jpg"
