@@ -1,30 +1,17 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext } from "react";
 import Dialog from "@mui/material/Dialog";
 import Button from "@mui/material/Button";
 import { MdClose } from "react-icons/md";
 import Rating from "@mui/material/Rating";
-import InnerImageZoom from "react-inner-image-zoom";
-import "react-inner-image-zoom/src/styles.css";
 import QuantityBox from "../QuantityBox";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { MdOutlineCompareArrows } from "react-icons/md";
 import { MyContext } from "../../App";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import ProductZoom from "../ProductZoom";
 
 const ProductModal = (props) => {
-  const [slideIndex, setSlideIndex] = useState(0);
-  const zoomSliderBig = useRef();
-  const zoomSlider = useRef();
   const context = useContext(MyContext);
 
-  const goto = (index) => {
-    setSlideIndex(index);
-    zoomSlider.current.swiper.slideTo(index);
-    zoomSliderBig.current.swiper.slideTo(index);
-  };
   return (
     <>
       <Dialog
@@ -61,94 +48,7 @@ const ProductModal = (props) => {
 
         <div className="row mt-2 productDetaileModal">
           <div className="col-md-5">
-            <div className="productZoom position-relative">
-              <div className="badge badge-primary">23%</div>
-              <Swiper
-                modules={[Navigation]}
-                spaceBetween={0}
-                slidesPerView={1}
-                navigation={false}
-                slidesPerGroup={1}
-                className="zoomSliderBig"
-                ref={zoomSliderBig}
-              >
-                <SwiperSlide>
-                  <div className="item">
-                    <InnerImageZoom
-                      zoomType="hover"
-                      zoomScale={1}
-                      src={`https://api.spicezgold.com/download/file_1734527098974_poco-c61-4gb-ram-64gb-rom-ethereal-blue-smartphone-product-images-orvmh0bwivm-p608625324-0-202403291512.webp`}
-                    />
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className="item">
-                    <InnerImageZoom
-                      zoomType="hover"
-                      zoomScale={1}
-                      src={`https://api.spicezgold.com/download/file_1734527098974_poco-c61-4gb-ram-64gb-rom-ethereal-blue-smartphone-product-images-orvmh0bwivm-p608625324-1-202403291512.jpg`}
-                    />
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-            </div>
-
-            <Swiper
-              modules={[Navigation]}
-              spaceBetween={0}
-              slidesPerView={4}
-              navigation={true}
-              slidesPerGroup={1}
-              className="zoomSlider"
-              ref={zoomSlider}
-            >
-              <SwiperSlide>
-                <div className={`item ${slideIndex === 0 && "item_active"}`}>
-                  <img
-                    src={`https://api.spicezgold.com/download/file_1734527098974_poco-c61-4gb-ram-64gb-rom-ethereal-blue-smartphone-product-images-orvmh0bwivm-p608625324-0-202403291512.webp`}
-                    className="w-100"
-                    onClick={() => goto(0)}
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={`item ${slideIndex === 1 && "item_active"}`}>
-                  <img
-                    src={`https://api.spicezgold.com/download/file_1734527098974_poco-c61-4gb-ram-64gb-rom-ethereal-blue-smartphone-product-images-orvmh0bwivm-p608625324-1-202403291512.jpg`}
-                    className="w-100"
-                    onClick={() => goto(1)}
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={`item ${slideIndex === 1 && "item_active"}`}>
-                  <img
-                    src={`https://api.spicezgold.com/download/file_1734527098974_poco-c61-4gb-ram-64gb-rom-ethereal-blue-smartphone-product-images-orvmh0bwivm-p608625324-1-202403291512.jpg`}
-                    className="w-100"
-                    onClick={() => goto(1)}
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={`item ${slideIndex === 1 && "item_active"}`}>
-                  <img
-                    src={`https://api.spicezgold.com/download/file_1734527098974_poco-c61-4gb-ram-64gb-rom-ethereal-blue-smartphone-product-images-orvmh0bwivm-p608625324-1-202403291512.jpg`}
-                    className="w-100"
-                    onClick={() => goto(1)}
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={`item ${slideIndex === 1 && "item_active"}`}>
-                  <img
-                    src={`https://api.spicezgold.com/download/file_1734527098974_poco-c61-4gb-ram-64gb-rom-ethereal-blue-smartphone-product-images-orvmh0bwivm-p608625324-1-202403291512.jpg`}
-                    className="w-100"
-                    onClick={() => goto(1)}
-                  />
-                </div>
-              </SwiperSlide>
-            </Swiper>
+            <ProductZoom />
           </div>
 
           <div className="col-md-7">

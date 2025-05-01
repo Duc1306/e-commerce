@@ -10,10 +10,11 @@ body {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.8);
   overflow-x: hidden;
+  font-size: 15px;
 }
 
 .bg-blue {
-  background: #6d4aee;
+  background: #7a55c1;
 }
 @media (min-width: 1300px) {
   .container,
@@ -31,14 +32,19 @@ button {
 .badge {
   display: inline-block;
   padding: 7px 10px;
+  border-radius: 20px;
 }
 .badge.bg-success {
   background: #e5f8ed !important;
   color: #16b858 !important;
 }
+.badge-success {
+  color: #00b853 !important;
+  background: #e5f8ed !important;
+}
 
 .btn-blue {
-  background: #6d4aee !important;
+  background: #7a55c1 !important;
   color: #fff !important;
   text-transform: capitalize !important;
 }
@@ -58,11 +64,15 @@ button {
 .btn-sml svg {
   font-size: 20px;
 }
+.btn-cricle {
+  border-right: 50% !important;
+  min-width: auto !important;
+}
 .cursor {
   cursor: pointer;
 }
 .text-light {
-  color: #8b8b8b !important;
+  color: #2e252db3 !important;
 }
 .text-sml {
   font-size: 14px;
@@ -126,7 +136,7 @@ button {
 .headerWrapper .header .part2 .countryDrop .name {
   font-size: 14px !important;
   text-transform: capitalize !important;
-  color: #6d4aee !important;
+  color: #7a55c1 !important;
   font-weight: 700;
   line-height: 16px;
 }
@@ -340,7 +350,7 @@ nav .navPart2 {
 }
 
 nav .allCatTab {
-  background: #6d4aee;
+  background: #7a55c1;
   padding: 10px 15px !important;
   border-radius: 30px !important;
 }
@@ -481,14 +491,12 @@ nav .navPart2 ul li:hover .submenu {
 }
 
 .swiper-button-next::after {
-  content: ">"; /* hiển thị ký tự > */
   font-size: 18px !important;
   color: #000 !important;
   opacity: 0.8 !important;
   line-height: 1 !important;
 }
 .swiper-button-prev::after {
-  content: "<"; /* hiển thị ký tự < */
   font-size: 18px !important;
   color: #000 !important;
   opacity: 0.8 !important;
@@ -565,7 +573,7 @@ nav .navPart2 ul li:hover .submenu {
   padding: 15px;
 }
 .info .oldPrice {
-  font-size: 16px;
+  font-size: 16px !important;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.4);
   text-decoration: line-through;
@@ -575,7 +583,7 @@ nav .navPart2 ul li:hover .submenu {
   font-size: 20px;
 }
 .info .netPrice {
-  font-size: 16px;
+  font-size: 16px !important;
   font-weight: bold;
 }
 .info .netPrice.lg {
@@ -639,7 +647,10 @@ nav .navPart2 ul li:hover .submenu {
 }
 .product_row {
   margin-left: -10px;
-  margin-right: 10px;
+  margin-right: -10px;
+}
+.product_row .swiper {
+  padding-right: 80px !important;
 }
 .product_row .productItem {
   border: 1px solid transparent !important;
@@ -782,7 +793,7 @@ nav .navPart2 ul li:hover .submenu {
   position: absolute;
   top: 6px;
   right: 7px;
-  background: #6d4aee !important;
+  background: #7a55c1 !important;
   font-size: 14px !important;
   padding: 12px 25px !important;
   color: #fff !important;
@@ -849,7 +860,7 @@ footer .copyright ul li a svg {
   color: #7a55c1;
 }
 footer .copyright ul li a:hover {
-  background: #6d4aee !important;
+  background: #7a55c1 !important;
 }
 footer .copyright ul li a:hover svg {
   color: #fff !important;
@@ -1000,7 +1011,7 @@ footer .copyright ul li a:hover svg {
 }
 .css-imrjgg-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
 .css-imrjgg-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
-  color: #6d4aee !important;
+  color: #7a55c1 !important;
 }
 
 .range-slider {
@@ -1008,7 +1019,7 @@ footer .copyright ul li a:hover svg {
 }
 .range-slider .range-slider__thumb,
 .range-slider .range-slider__range {
-  background: #6d4aee !important;
+  background: #7a55c1 !important;
 }
 .range-slider .range-slider__thumb {
   width: 15px !important;
@@ -1108,4 +1119,154 @@ footer .copyright ul li a:hover svg {
 
 .productListing .productItem.one .imgWrapper {
   width: 25%;
+}
+
+.section {
+  padding: 45px 0px;
+}
+
+.productDetails h2.hd {
+  font-size: 26px;
+}
+.productDetails h3.hd {
+  font-size: 18px !important;
+}
+.productDetails .oldPrice {
+  font-size: 20px;
+}
+.productDetails .netPrice {
+  font-size: 22px;
+}
+.productSize {
+  width: 100%;
+  height: auto;
+  padding: 25px 0px;
+}
+.productSize ul li {
+  margin-right: 10px !important;
+}
+.productSize ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: #000;
+  font-size: 14px !important;
+  transition: all 0.1s ease-in-out;
+}
+.productSize ul li a:hover {
+  background: #eaeaea !important;
+}
+
+.productSize ul li a.active {
+  background: #7a55c1 !important;
+  color: #fff !important;
+}
+
+.productDetails .btn-cricle {
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: #edeef5 !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #000;
+  padding: 5px !important;
+}
+
+.productDetails .btn-cricle svg {
+  color: #000 !important;
+  opacity: 0.8;
+  font-size: 18px !important;
+}
+
+.productDetails .btn-cricle:hover {
+  background: #ccc !important;
+}
+.detailsPageTabs {
+  border-radius: 25px !important;
+  background: #fafafa;
+}
+.customTabs ul li {
+  margin-right: 10px !important;
+}
+.customTabs ul li button {
+  padding: 6px 25px !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  font-size: 14px !important;
+  text-transform: capitalize !important;
+  border-radius: 30px !important;
+  color: #000 !important;
+}
+.customTabs ul li button.active {
+  background: #7a55c1 !important;
+  color: #fff !important;
+}
+
+.detailsPageTabs .table th,
+.detailsPageTabs .table td {
+  vertical-align: middle;
+  font-size: 14px;
+}
+.detailsPageTabs .table td p {
+  margin-bottom: 0px;
+}
+.reviewsCard {
+  margin-bottom: 25px !important;
+}
+.reviewsCard .image {
+  width: 100px;
+}
+
+.reviewsCard .rounded-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+}
+.reviewsCard .rounded-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reviewsCard .info {
+  width: 85%;
+}
+.reviewForm {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.reviewForm .form-group {
+  margin-bottom: 25px;
+}
+
+.reviewForm .form-group .form-control {
+  height: 50px;
+  font-size: 16px;
+  border-radius: 7px !important;
+  padding-left: 20px;
+}
+
+.reviewForm .form-group textarea.form-control {
+  height: 200px;
+  padding-top: 25px;
+}
+
+.progressBarBox {
+  margin-bottom: 10px;
+}
+.progress-bar {
+  font-size: 16px;
+}
+.reviewsCard .info p {
+  font-size: 13px;
+  line-height: 22px;
 }

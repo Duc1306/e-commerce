@@ -47,7 +47,7 @@ const Home = () => {
                 </Button>
               </div>
 
-              <div className="product_row w-100 mt-4">
+              <div className="product_row w-100 mt-2">
                 <Swiper
                   modules={[Navigation]}
                   spaceBetween={0}
