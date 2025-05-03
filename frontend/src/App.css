@@ -14,7 +14,7 @@ body {
 }
 
 .bg-blue {
-  background: #7a55c1;
+  background: #6d4aae;
 }
 @media (min-width: 1300px) {
   .container,
@@ -44,14 +44,28 @@ button {
 }
 
 .btn-blue {
-  background: #7a55c1 !important;
+  background: #6d4aae !important;
   color: #fff !important;
   text-transform: capitalize !important;
+  padding: 5px 20px !important;
+}
+.btn-blue svg{
+  font-size: 22px;
+}
+.btn-blue:hover{
+  background: #53348c !important;
+}
+.bg-red {
+    background: #ed174a !important;
+}
+.text-red{
+  color: #ed174a !important;
 }
 .btn-big {
   font-size: 15px !important;
   padding: 7px 30px !important;
   min-width: auto !important;
+  font-weight: bold !important;
 }
 .btn-round {
   border-radius: 30px !important;
@@ -136,7 +150,7 @@ button {
 .headerWrapper .header .part2 .countryDrop .name {
   font-size: 14px !important;
   text-transform: capitalize !important;
-  color: #7a55c1 !important;
+  color: #6d4aae !important;
   font-weight: 700;
   line-height: 16px;
 }
@@ -308,11 +322,11 @@ nav .navPart1 .catWrapper .sidebarNav ul li button svg {
 }
 nav .navPart1 .catWrapper .sidebarNav ul li button:hover {
   background: transparent !important;
-  color: #7a55c1 !important;
+  color: #6d4aae !important;
 }
 
 nav .navPart1 .catWrapper .sidebarNav ul li button:first-child {
-  /* color: #7a55c1 !important; */
+  /* color: #6d4aae !important; */
 }
 
 nav .navPart1 .catWrapper .sidebarNav ul li {
@@ -341,7 +355,7 @@ nav .navPart1 .catWrapper .sidebarNav ul li:hover .submenu button {
   color: #000 !important;
 }
 nav .navPart1 .catWrapper .sidebarNav ul li .submenu button:hover {
-  color: #7a55c1 !important;
+  color: #6d4aae !important;
 }
 
 nav .navPart2 {
@@ -350,7 +364,7 @@ nav .navPart2 {
 }
 
 nav .allCatTab {
-  background: #7a55c1;
+  background: #6d4aae;
   padding: 10px 15px !important;
   border-radius: 30px !important;
 }
@@ -358,11 +372,11 @@ nav .allCatTab * {
   color: #fff;
 }
 nav .allCatTab:hover {
-  background: #7a55c1;
+  background: #6d4aae;
 }
 nav .allCatTab .text {
   font-weight: 600;
-  white-space: nowrap;
+  font-size: 12px;
 }
 nav .allCatTab .icon1 svg {
   font-size: 20px !important;
@@ -399,7 +413,7 @@ nav .navPart2 ul li a svg {
 }
 nav .navPart2 ul li a:hover {
   background: #f0faff;
-  color: #7a55c1;
+  color: #6d4aae;
 }
 
 nav .navPart2 ul li {
@@ -569,6 +583,9 @@ nav .navPart2 ul li:hover .submenu {
   font-size: 15px;
   font-weight: 600;
 }
+.productItem .info h4:hover{
+  color: #ed174a !important;
+}
 .productItem .info {
   padding: 15px;
 }
@@ -617,7 +634,8 @@ nav .navPart2 ul li:hover .submenu {
   transition: all 0s !important;
 }
 .productItem .actions button:hover {
-  background: #7a55c1 !important;
+  background: #ed174a !important;
+  border: 1px solid #ed174a !important;
 }
 .productItem .actions button:hover svg {
   color: #fff !important;
@@ -736,7 +754,7 @@ nav .navPart2 ul li:hover .submenu {
 .newsLetterSection {
   width: 100%;
   height: auto;
-  background-image: linear-gradient(to bottom right, #4a2888, #7a55c1);
+  background-image: linear-gradient(to bottom right, #4a2888, #6d4aae);
 
   position: relative;
   overflow: hidden;
@@ -793,7 +811,7 @@ nav .navPart2 ul li:hover .submenu {
   position: absolute;
   top: 6px;
   right: 7px;
-  background: #7a55c1 !important;
+  background: #6d4aae !important;
   font-size: 14px !important;
   padding: 12px 25px !important;
   color: #fff !important;
@@ -857,10 +875,10 @@ footer .copyright ul li a {
 }
 footer .copyright ul li a svg {
   font-size: 16px;
-  color: #7a55c1;
+  color: #6d4aae;
 }
 footer .copyright ul li a:hover {
-  background: #7a55c1 !important;
+  background: #6d4aae !important;
 }
 footer .copyright ul li a:hover svg {
   color: #fff !important;
@@ -1011,7 +1029,7 @@ footer .copyright ul li a:hover svg {
 }
 .css-imrjgg-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
 .css-imrjgg-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
-  color: #7a55c1 !important;
+  color: #6d4aae !important;
 }
 
 .range-slider {
@@ -1019,7 +1037,7 @@ footer .copyright ul li a:hover svg {
 }
 .range-slider .range-slider__thumb,
 .range-slider .range-slider__range {
-  background: #7a55c1 !important;
+  background: #6d4aae !important;
 }
 .range-slider .range-slider__thumb {
   width: 15px !important;
@@ -1163,7 +1181,7 @@ footer .copyright ul li a:hover svg {
 }
 
 .productSize ul li a.active {
-  background: #7a55c1 !important;
+  background: #6d4aae !important;
   color: #fff !important;
 }
 
@@ -1203,7 +1221,7 @@ footer .copyright ul li a:hover svg {
   color: #000 !important;
 }
 .customTabs ul li button.active {
-  background: #7a55c1 !important;
+  background: #6d4aae !important;
   color: #fff !important;
 }
 
@@ -1269,4 +1287,71 @@ footer .copyright ul li a:hover svg {
 .reviewsCard .info p {
   font-size: 13px;
   line-height: 22px;
+}
+.cartPage .table thead{
+  background: #e3e3e3 !important;
+  border-radius: 10px; 
+  overflow: hidden;
+}
+.cartPage .table thead th{
+  border: 0px !important;
+}
+.cartPage .table thead th:first-child{
+  border-top-left-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+}
+
+.cartPage .table thead th:last-child{
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+}
+a:hover{
+  text-decoration: none;
+  font-weight: bold;
+}
+.cartItemimgWrapper{
+  width: 280px;
+}
+.cartItemimgWrapper .imgWrapper{
+  width: 100px;
+  overflow: hidden    ;
+}
+.cartItemimgWrapper .info a:hover{
+  text-decoration: none;
+}
+.cartItemimgWrapper .info h6{
+  color: #343434;
+  font-weight: bold;
+}
+.cartItemimgWrapper .info h6:hover{
+  color: #ed174a !important;
+}
+.remove{
+  cursor: pointer;
+}
+.remove svg{
+  font-size: 30px;
+}
+.remove:hover svg{
+  color: #ed174a !important;
+}
+.cartPage .quantityDrop button{zoom: 75%;}
+.cartPage table th ,.cartPage table td{
+  vertical-align: middle;
+}
+.cartPage .table td ,.cartPage .table th{
+  border-top: 0px !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+.cartPage table tbody tr:hover{
+  background: #fafafa;
+}
+.cartDetails{
+  border-radius: 7px !important;
+}
+.cartDetails h4{
+  font-size: 16px;
+  padding-bottom: 15px;
+  font-weight: 800 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
