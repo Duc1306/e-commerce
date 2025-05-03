@@ -12,7 +12,9 @@ body {
   overflow-x: hidden;
   font-size: 15px;
 }
-
+.text-center {
+    text-align: center !important;
+}
 .bg-blue {
   background: #6d4aae;
 }
@@ -48,6 +50,7 @@ button {
   color: #fff !important;
   text-transform: capitalize !important;
   padding: 5px 20px !important;
+    font-weight: 600 !important;
 }
 .btn-blue svg{
   font-size: 22px;
@@ -63,9 +66,9 @@ button {
 }
 .btn-big {
   font-size: 15px !important;
-  padding: 7px 30px !important;
+  padding: 8px 30px !important;
   min-width: auto !important;
-  font-weight: bold !important;
+  font-weight: 700 !important;
 }
 .btn-round {
   border-radius: 30px !important;
@@ -105,6 +108,7 @@ button {
 
 .headerWrapper {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
 }
 .headerWrapper .top-strip h5 {
   color: #ffffff !important;
@@ -160,7 +164,7 @@ button {
 }
 
 .headerSearch {
-  width: 60%;
+  width: 58%;
   height: 50px;
   background: #f3f4f7;
   padding: 5px;
@@ -216,7 +220,7 @@ header .part3 .circle svg {
 }
 .cartTab .price {
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.8);
+  color: #000;
   font-weight: 700;
 }
 .cartTab button {
@@ -1354,4 +1358,114 @@ a:hover{
   padding-bottom: 15px;
   font-weight: 800 !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.signInPage {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.signInPage .shape-bottom {
+    bottom: -6px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: auto;
+    z-index: 1;
+}
+.signInPage .box {
+    background: #fff;
+    border-radius: 10px !important;
+    height: auto;
+    margin: auto;
+    position: relative;
+    width: 400px;
+    z-index: 100;
+}
+.signInPage .box form {
+    padding: 20px 30px;
+}
+.signInPage .box h2 {
+    font-size: 25px;
+    font-weight: 600;
+}
+.signInPage .box .form-group {
+    margin-bottom: 15px;
+}
+.position-relative {
+    position: relative !important;
+}
+.signInPage:after {
+    background-image: linear-gradient(#46277e, #583991);
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+.border-effect:after {
+    background-color: #102a44;
+    bottom: -2px;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    transition: .2s;
+    width: 0;
+}
+.border-effect:hover:after{
+  width: 100%;
+}
+.signInPage .box .txt {
+    font-size: 14px;
+    font-weight: 700;
+}
+.border-effect {
+    color: #337ab7;
+    position: relative;
+    text-decoration: none;
+}
+    .signInPage .box form button {
+        margin-bottom: 10px;
+    }
+
+    .border-effect:hover {
+    color: #000;
+    text-decoration: none;
+}
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+.loginWithGoogle img {
+    margin-right: 10px;
+    width: 30px;
+}
+.loginWithGoogle {
+    color: #000c !important;
+    font-weight: 700 !important;
+    width: 100%;
+}
+.ml-3, .mx-3 {
+    margin-left: 1rem !important;
+}
+.ml-2, .mx-2 {
+    margin-left: 0.5rem !important;
+}
+.signUpPage .box {
+    width: 500px;
+}
+.d-block {
+    display: block !important;
+}
+.w-100 {
+    width: 100% !important;
 }

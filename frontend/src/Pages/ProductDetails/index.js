@@ -3,7 +3,7 @@ import ProductZoom from "../../Components/ProductZoom";
 import Rating from "@mui/material/Rating";
 import QuantityBox from "./../../Components/QuantityBox/index";
 import { Button, Tooltip } from "@mui/material";
-import { BsCartFill } from "react-icons/bs";
+import { IoCartSharp } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa6";
 import { MdOutlineCompareArrows } from "react-icons/md";
 import RelatedProducts from "./RelatedProducts";
@@ -106,8 +106,8 @@ const ProductDetails = () => {
               </div>
               <div className="d-flex align-items-center mt-3">
                 <QuantityBox />
-                <Button className=" btn-blue btn-lg btn-big btn-round">
-                  <BsCartFill /> &nbsp; Add to cart
+                <Button className=" btn-blue btn-lg btn-big btn-round bg-red">
+                  <IoCartSharp /> &nbsp; Add to cart
                 </Button>
                 <Tooltip title="Add to WishList" placement="top">
                   <Button className="btn-blue btn-lg btn-big btn-cricle ml-4">
