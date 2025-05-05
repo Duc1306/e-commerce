@@ -13,7 +13,7 @@ body {
   font-size: 15px;
 }
 .text-center {
-    text-align: center !important;
+  text-align: center !important;
 }
 .bg-blue {
   background: #6d4aae;
@@ -50,18 +50,18 @@ button {
   color: #fff !important;
   text-transform: capitalize !important;
   padding: 5px 20px !important;
-    font-weight: 600 !important;
+  font-weight: 600 !important;
 }
-.btn-blue svg{
+.btn-blue svg {
   font-size: 22px;
 }
-.btn-blue:hover{
+.btn-blue:hover {
   background: #53348c !important;
 }
 .bg-red {
-    background: #ed174a !important;
+  background: #ed174a !important;
 }
-.text-red{
+.text-red {
   color: #ed174a !important;
 }
 .btn-big {
@@ -162,44 +162,47 @@ button {
 .headerWrapper .header .part2 .countryDrop span.ml-auto svg {
   opacity: 0.7;
 }
-
-.headerSearch {
+.headerSearchWrapper {
+  position: relative;
   width: 58%;
+}
+.headerSearch {
+  background: #e5e5e5;
+  border: 1px solid #0000000d;
+  border-radius: 5px;
   height: 50px;
-  background: #f3f4f7;
   padding: 5px;
   position: relative;
-  border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  width: 100%;
 }
 .headerSearch input {
-  background: transparent !important;
-  outline: none !important;
+  background: #0000 !important;
+  border: 0 !important;
+  color: #000000b3;
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.7);
-  width: 100%;
   height: 37px;
-  border: 0px !important;
-  padding: 0px 20px !important;
+  outline: none !important;
+  padding: 0 20px !important;
+  width: 100%;
 }
-
 .headerSearch input::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.4);
 }
 
 .headerSearch button {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  z-index: 100;
-  min-width: 40px !important;
-  height: 40px !important;
-  width: 40px !important;
   border-radius: 50% !important;
   color: #000;
+  height: 40px !important;
+  min-width: 40px !important;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  width: 40px !important;
+  z-index: 100;
 }
 
 .headerSearch button svg {
+  color: #000 !important;
   font-size: 25px;
   opacity: 0.8;
 }
@@ -213,6 +216,7 @@ header .part3 .circle {
   border-radius: 50% !important;
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
   color: #000;
+  background: #ededed;
 }
 
 header .part3 .circle svg {
@@ -369,7 +373,7 @@ nav .navPart2 {
 
 nav .allCatTab {
   background: #6d4aae;
-  padding: 10px 15px !important;
+  padding: 7px 12px !important;
   border-radius: 30px !important;
 }
 nav .allCatTab * {
@@ -394,6 +398,8 @@ nav .navPart2 ul {
 
 nav .navPart2 ul li {
   padding-bottom: 20px;
+  position: relative;
+  margin-right: 0 !important;
 }
 
 nav .navPart2 ul li a {
@@ -404,11 +410,11 @@ nav .navPart2 ul li a button {
   font-size: 14px !important;
   font-weight: 600;
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.6);
-  text-transform: uppercase;
+  color: #000000b3;
+  text-transform: uppercase !important;
   display: flex;
   align-items: center;
-  padding: 8px 15px;
+  padding: 6px 20px;
   transition: all 0.2s ease-in-out;
   border-radius: 25px;
 }
@@ -426,13 +432,16 @@ nav .navPart2 ul li {
 nav .navPart2 ul li .submenu {
   position: absolute;
   top: 150%;
-  left: 0px;
+  left: 0;
   min-width: 200px;
   background: #fff;
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s ease-in-out;
   z-index: 100;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 3px 6px #00000029, 0 3px 6px #0000003b;
 }
 nav .navPart2 ul li .submenu a {
   display: block;
@@ -445,6 +454,7 @@ nav .navPart2 ul li .submenu a button {
   text-transform: capitalize !important;
   font-weight: 500 !important;
   color: #373737 !important;
+  text-align: left !important;
 }
 nav .navPart2 ul li .submenu a button:hover {
   background: #f1f1f1 !important;
@@ -587,7 +597,7 @@ nav .navPart2 ul li:hover .submenu {
   font-size: 15px;
   font-weight: 600;
 }
-.productItem .info h4:hover{
+.productItem .info h4:hover {
   color: #ed174a !important;
 }
 .productItem .info {
@@ -1292,180 +1302,174 @@ footer .copyright ul li a:hover svg {
   font-size: 13px;
   line-height: 22px;
 }
-.cartPage .table thead{
+.cartPage .table thead {
   background: #e3e3e3 !important;
-  border-radius: 10px; 
+  border-radius: 10px;
   overflow: hidden;
 }
-.cartPage .table thead th{
+.cartPage .table thead th {
   border: 0px !important;
 }
-.cartPage .table thead th:first-child{
+.cartPage .table thead th:first-child {
   border-top-left-radius: 10px !important;
   border-bottom-left-radius: 10px !important;
 }
 
-.cartPage .table thead th:last-child{
+.cartPage .table thead th:last-child {
   border-top-right-radius: 10px !important;
   border-bottom-right-radius: 10px !important;
 }
-a:hover{
+a:hover {
   text-decoration: none;
   font-weight: bold;
 }
-.cartItemimgWrapper{
+.cartItemimgWrapper {
   width: 280px;
 }
-.cartItemimgWrapper .imgWrapper{
+.cartItemimgWrapper .imgWrapper {
   width: 100px;
-  overflow: hidden    ;
+  overflow: hidden;
 }
-.cartItemimgWrapper .info a:hover{
+.cartItemimgWrapper .info a:hover {
   text-decoration: none;
 }
-.cartItemimgWrapper .info h6{
+.cartItemimgWrapper .info h6 {
   color: #343434;
   font-weight: bold;
 }
-.cartItemimgWrapper .info h6:hover{
+.cartItemimgWrapper .info h6:hover {
   color: #ed174a !important;
 }
-.remove{
+.remove {
   cursor: pointer;
 }
-.remove svg{
+.remove svg {
   font-size: 30px;
 }
-.remove:hover svg{
+.remove:hover svg {
   color: #ed174a !important;
 }
-.cartPage .quantityDrop button{zoom: 75%;}
-.cartPage table th ,.cartPage table td{
+.cartPage .quantityDrop button {
+  zoom: 75%;
+}
+.cartPage table th,
+.cartPage table td {
   vertical-align: middle;
 }
-.cartPage .table td ,.cartPage .table th{
+.cartPage .table td,
+.cartPage .table th {
   border-top: 0px !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
-.cartPage table tbody tr:hover{
+.cartPage table tbody tr:hover {
   background: #fafafa;
 }
-.cartDetails{
+.cartDetails {
   border-radius: 7px !important;
 }
-.cartDetails h4{
+.cartDetails h4 {
   font-size: 16px;
   padding-bottom: 15px;
   font-weight: 800 !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .signInPage {
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 .signInPage .shape-bottom {
-    bottom: -6px;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: auto;
-    z-index: 1;
+  bottom: -6px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: auto;
+  z-index: 1;
 }
 .signInPage .box {
-    background: #fff;
-    border-radius: 10px !important;
-    height: auto;
-    margin: auto;
-    position: relative;
-    width: 400px;
-    z-index: 100;
+  background: #fff;
+  border-radius: 10px !important;
+  height: auto;
+  margin: auto;
+  position: relative;
+  width: 400px;
+  z-index: 100;
 }
 .signInPage .box form {
-    padding: 20px 30px;
+  padding: 20px 30px;
 }
 .signInPage .box h2 {
-    font-size: 25px;
-    font-weight: 600;
+  font-size: 25px;
+  font-weight: 600;
 }
 .signInPage .box .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 .position-relative {
-    position: relative !important;
+  position: relative !important;
 }
 .signInPage:after {
-    background-image: linear-gradient(#46277e, #583991);
-    content: "";
-    height: 100%;
-    left: 0;
-    opacity: 0.9;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;
+  background-image: linear-gradient(#46277e, #583991);
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.9;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 .border-effect:after {
-    background-color: #102a44;
-    bottom: -2px;
-    content: "";
-    display: block;
-    height: 1px;
-    left: 0;
-    position: absolute;
-    transition: .2s;
-    width: 0;
+  background-color: #102a44;
+  bottom: -2px;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transition: 0.2s;
+  width: 0;
 }
-.border-effect:hover:after{
+.border-effect:hover:after {
   width: 100%;
 }
 .signInPage .box .txt {
-    font-size: 14px;
-    font-weight: 700;
+  font-size: 14px;
+  font-weight: 700;
 }
 .border-effect {
-    color: #337ab7;
-    position: relative;
-    text-decoration: none;
+  color: #337ab7;
+  position: relative;
+  text-decoration: none;
 }
-    .signInPage .box form button {
-        margin-bottom: 10px;
-    }
+.signInPage .box form button {
+  margin-bottom: 10px;
+}
 
-    .border-effect:hover {
-    color: #000;
-    text-decoration: none;
+.border-effect:hover {
+  color: #000;
+  text-decoration: none;
 }
 a:hover {
-    color: #0056b3;
-    text-decoration: underline;
+  color: #0056b3;
+  text-decoration: underline;
 }
 
 .font-weight-bold {
-    font-weight: 700 !important;
+  font-weight: 700 !important;
 }
 .loginWithGoogle img {
-    margin-right: 10px;
-    width: 30px;
+  margin-right: 10px;
+  width: 30px;
 }
 .loginWithGoogle {
-    color: #000c !important;
-    font-weight: 700 !important;
-    width: 100%;
+  color: #000c !important;
+  font-weight: 700 !important;
+  width: 100%;
 }
-.ml-3, .mx-3 {
-    margin-left: 1rem !important;
-}
-.ml-2, .mx-2 {
-    margin-left: 0.5rem !important;
-}
+
 .signUpPage .box {
-    width: 500px;
+  width: 500px;
 }
-.d-block {
-    display: block !important;
-}
-.w-100 {
-    width: 100% !important;
-}
+

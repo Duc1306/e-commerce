@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "react-inner-image-zoom/src/styles.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 
 
 import App from './App';

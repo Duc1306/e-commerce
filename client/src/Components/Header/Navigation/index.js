@@ -14,7 +14,7 @@ const Navigation = () => {
           <div className="col-sm-2 navPart1">
             <div className="catWrapper">
               <Button
-                className="allCatTab align-items-center"
+                className="allCatTab align-items-center res-hide"
                 onClick={() => setisOpenSidebarVal(!isOpenSidebarVal)}
               >
                 <span className="icon1 mr-2">
