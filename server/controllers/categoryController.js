@@ -1,22 +1,17 @@
-const  {Category}  = require("../models/category");
-const express = require("express");
-const router = express.Router();
+const Category = require("../models/Category");
 const pLimit = require("p-limit");
 const cloudinary = require("../utils/cloudinary");
 
-
-router.get("/", async (req, res) => {
+exports.getAllCategories = async (req, res) => {
   const CategoryList = await Category.find();
 
   if (!CategoryList) {
     res.status(500).json({ success: false });
   }
   res.send(CategoryList);
-});
+};
 
-
-
-router.post("/create", async (req, res) => {
+exports.createCategory = async (req, res) => {
   const limit = pLimit(2);
 
   const imagesToUpload = req.body.images.map((image) => {
@@ -53,9 +48,9 @@ router.post("/create", async (req, res) => {
   category = await category.save();
 
   res.status(201).json(category);
-});
+};
 
-router.get("/:id", async (req, res) => {
+exports.getCategoryById = async (req, res) => {
   const category = await Category.findById(req.params.id);
 
   if (!category) {
@@ -65,8 +60,9 @@ router.get("/:id", async (req, res) => {
     });
   }
   res.status(200).send(category);
-});
-router.delete("/:id", async (req, res) => {
+};
+
+exports.deleteCategory = async (req, res) => {
   const deleteUser = await Category.findByIdAndDelete(req.params.id);
 
   if (!deleteUser) {
@@ -80,9 +76,9 @@ router.delete("/:id", async (req, res) => {
     message: "category Delete! ",
     success: true,
   });
-});
+};
 
-router.put("/:id", async (req, res) => {
+exports.updateCategory = async (req, res) => {
   const limit = pLimit(2);
 
   const imagesToUpload = req.body.images.map((image) => {
@@ -117,6 +113,4 @@ router.put("/:id", async (req, res) => {
 
   if (!category) return res.status(404).send("Category cannot be created");
   res.send(category);
-});
-
-module.exports = router;
+};

@@ -1,21 +1,18 @@
-const express = require("express");
-const router = express.Router();
+const Product = require("../models/Products");
+const Category = require("../models/Category");
 const pLimit = require("p-limit");
 const cloudinary = require("../utils/cloudinary");
 
-const { Product } = require("../models/products");
-const { Category } = require("../models/category");
-
-router.get("/", async (req, res) => {
+exports.getAllProducts = async (req, res) => {
   const productList = await Product.find().populate("category");
 
   if (!productList) {
     res.status(500), json({ success: false });
   }
   res.send(productList);
-});
+};
 
-router.post("/create", async (req, res) => {
+exports.createProduct = async (req, res) => {
   const category = await Category.findById(req.body.category);
   if (!category) return res.status(400).send("Invalid Category");
   const limit = pLimit(2);
@@ -61,9 +58,9 @@ router.post("/create", async (req, res) => {
   }
 
   res.status(201).json(product);
-});
+};
 
-router.get("/:id", async (req, res) => {
+exports.getProductById = async (req, res) => {
   const product = await Product.findById(req.params.id).populate("category");
 
   if (!product) {
@@ -73,9 +70,9 @@ router.get("/:id", async (req, res) => {
     });
   }
   res.status(200).send(product);
-});
+};
 
-router.put("/:id", async (req, res) => {
+exports.updateProduct = async (req, res) => {
   const limit = pLimit(2);
 
   const imagesToUpload = req.body.images.map((image) => {
@@ -121,8 +118,9 @@ router.put("/:id", async (req, res) => {
       .json({ message: "Product cannot be updated", status: false });
   }
   res.status(200).json({ message: "the product is updates", status: true });
-});
-router.delete("/:id", async (req, res) => {
+};
+
+exports.deleteProduct = async (req, res) => {
   const deleteProduct = await Product.findByIdAndDelete(req.params.id);
   if (!deleteProduct) {
     return res
@@ -130,6 +128,4 @@ router.delete("/:id", async (req, res) => {
       .json({ success: false, message: "Product not found" });
   }
   res.status(200).send({ status: true, message: "the product is delete" });
-});
-
-module.exports = router;
+};
