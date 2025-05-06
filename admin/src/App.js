@@ -3,15 +3,26 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Header from "./components/Header";
+import Sidebar from "./components/Siderbar";
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-      </Routes>
+
+      <div className="main d-flex">
+        <div className="sidebarOverlay d-none false"></div>
+        <div className="sidebarWrapper">
+          <Sidebar />
+        </div>
+      </div>
+
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }
