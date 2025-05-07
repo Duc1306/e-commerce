@@ -381,3 +381,227 @@ body.dark .main .sidebarWrapper .sidebar ul .submenu li a:hover {
   top: 20px;
   width: 30px;
 }
+
+.right-content {
+  padding: 90px 30px 10px;
+}
+.dashboardBoxWrapper {
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}
+.dashboardBoxWrapper .dashboardBox {
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  height: 170px;
+  justify-content: space-around;
+  position: relative;
+  width: 48%;
+  text-align: left !important;
+  text-transform: capitalize !important;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+}
+.dashboardBoxWrapper .dashboardBox .chart {
+    bottom: 20px;
+    left: 20px;
+    opacity: 0.05;
+    position: absolute;
+}
+.dashboardBoxWrapper .dashboardBox .chart svg {
+    color: rgb(0, 0, 0);
+    font-size: 110px;
+}
+.dashboardBoxWrapper .dashboardBox .col1 h4 {
+    font-size: 16px;
+    font-weight: 600;
+}
+.dashboardBoxWrapper .dashboardBox .col1 span {
+    font-weight: 700;
+    line-height: 45px;
+    font-size: 35px !important;
+}
+.dashboardBoxWrapper .dashboardBox .icon {
+    align-items: center;
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+    display: flex
+;
+    height: 50px;
+    justify-content: center;
+    width: 50px;
+    border-radius: 10px;
+}
+.dashboardBoxWrapper .dashboardBox .icon svg {
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+    opacity: 0.4;
+}
+.dashboardBoxWrapper .dashboardBox .bottomEle {
+    position: relative;
+    top: 15px;
+}
+.dashboardBoxWrapper .dashboardBox .toggleIcon {
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    font-size: 22px;
+    height: 40px !important;
+    min-width: 40px !important;
+    width: 40px !important;
+    border-radius: 50% !important;
+}
+.toggleIcon svg {
+    color: rgb(255, 255, 255) !important;
+    font-size: 20px !important;
+    opacity: 1 !important;
+}
+.dropdown_menu .MuiButtonBase-root svg {
+    margin-right: 10px !important;
+}
+.dashboardBoxWrapperRow .box {
+    height: 100%;
+    width: 100%;
+}
+.graphBox {
+    background-image: linear-gradient(rgb(26, 80, 181), rgb(42, 111, 247));
+    border-radius: 10px;
+    padding: 25px;
+}
+.graphBox p {
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    opacity: 0.7;
+}
+.card {
+    border-radius: 10px;
+    margin: 20px 0px;
+}
+.card .hd {
+    color: rgb(64, 62, 87);
+    font-size: 18px;
+    font-weight: 700;
+}
+.cardFilters .col-md-3 h4 {
+    color: rgb(64, 62, 87);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.table-responsive {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+}
+.table-responsive > .table-bordered {
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+}
+.table-bordered, .table-bordered td, .table-bordered th {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(222, 226, 230);
+    border-image: initial;
+}
+.table-bordered th, body.dark .table-bordered td {
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    border-image: initial !important;
+}
+.table {
+    color: rgb(33, 37, 41);
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.table .thead-dark th {
+    background-color: rgb(24, 102, 238) !important;
+    font-size: 13px !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid rgb(222, 226, 230);
+}
+.table td, .table th {
+    vertical-align: top;
+    border-top: 1px solid rgb(222, 226, 230);
+    padding: 0.75rem;
+}
+.table .thead-dark th {
+    background-color: rgb(52, 58, 64);
+    color: rgb(255, 255, 255);
+    border-color: rgb(69, 77, 85);
+}
+table td .imgWrapper {
+    width: 20%;
+    flex: 0 0 20%;
+}
+table td .imgWrapper .card {
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+table td .info {
+    width: 65%;
+    flex: 0 0 65%;
+}
+table td .info h6, table td .info p {
+    margin-bottom: 0px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+table td .info h6 {
+    font-size: 14px;
+    font-weight: 600;
+}
+table td .info p {
+    color: rgb(94, 93, 114);
+    font-size: 13px;
+    line-height: 18px;
+}
+table.v-align td .productBox {
+    width: 270px;
+}
+.table td .new, .table td .old {
+    display: block;
+    width: 100%;
+}
+.table td .new, .table td .old {
+    display: block;
+    width: 100%;
+}
+.text-danger {
+    color: rgb(255, 97, 121) !important;
+}
+.table tbody .actions button.secondary {
+    background: rgba(203, 60, 231, 0.2) !important;
+}
+.table tbody .actions button.success {
+    background: rgba(26, 159, 83, 0.2) !important;
+}
+.table tbody .actions button.error {
+    background: rgba(241, 17, 51, 0.2) !important;
+}
+.table tbody .actions button {
+    height: 32px !important;
+    min-width: 32px !important;
+    width: 32px !important;
+    margin: 0px 3px !important;
+}
+.table tbody .actions button svg {
+    font-size: 30px !important;
+}
+table.v-align td {
+    vertical-align: middle !important;
+}
+.table tbody td {
+    color: #2f2d3e;
+    font-size: 14px !important;
+    font-weight: 500;
+}
+.tableFooter .pagination {
+    margin-left: auto;
+}

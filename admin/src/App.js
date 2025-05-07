@@ -15,13 +15,13 @@ function App() {
         <div className="sidebarWrapper">
           <Sidebar />
         </div>
-      </div>
 
-      <div className="content">
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-        </Routes>
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+          </Routes>
+        </div>
       </div>
     </BrowserRouter>
   );

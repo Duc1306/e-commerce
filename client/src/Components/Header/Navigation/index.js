@@ -114,7 +114,9 @@ const Navigation = () => {
             </div>
           </div>
 
-          <div className="col-sm-10 navPart2 d-flex align-items-center ">
+          <div className="col-sm-10 navPart2 d-flex align-items-center res-nav-wrapper close ">
+            <div class="res-nav-overlay"></div>
+            <div class="res-nav">
             <ul className="list list-inline ml-auto">
               <li className="list-inline-item">
                 <Link to="/">
@@ -205,6 +207,7 @@ const Navigation = () => {
               </li>
             </ul>
           </div>
+        </div>
         </div>
       </div>
     </nav>
