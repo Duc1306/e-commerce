@@ -1,14 +1,16 @@
 import { Button } from "@mui/material";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { MdDashboard } from "react-icons/md";
 import { FaProductHunt } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
 import { FaCartArrowDown } from "react-icons/fa";
 import { IoMdLogOut } from "react-icons/io";
+import { MyContext } from "../../App";
 
 const Sidebar = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [isToggleSubmenu, setIsToggleSubmenu] = useState(false);
+  const context = useContext(MyContext)
   const isOpenSubMenu = (index) => {
     setActiveTab(index);
     setIsToggleSubmenu(!isToggleSubmenu);

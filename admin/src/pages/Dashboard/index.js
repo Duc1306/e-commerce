@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import DashboardBox from "./components/DashboardBox";
 import { FaUserCircle } from "react-icons/fa";
 import { IoMdCart } from "react-icons/io";
@@ -18,6 +18,7 @@ import Select from "@mui/material/Select";
 import { FaEye } from "react-icons/fa";
 import { FaPencilAlt } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import { MyContext } from "../../App";
 
 
 export const data = [
@@ -48,6 +49,12 @@ const Dashboard = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const context = useContext(MyContext)
+
+  useEffect(()=>{
+    context.setisHeaderSidebarShow(false)
+  },[])
   return (
     <>
       <div className="right-content w-100">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import HomeBanner from "../../Components/HomeBanner";
 import banner1 from "../../assets/images/banner1.jpg";
 import banner2 from "../../assets/images/banner2.jpg";
@@ -14,8 +14,14 @@ import { Navigation } from "swiper/modules";
 import ProductItem from "../../Components/ProductItem";
 import HomeCat from "../../Components/HomeCat";
 import { IoMailOutline } from "react-icons/io5";
+import { MyContext } from "../../App";
 
 const Home = () => {
+  const context = useContext(MyContext)
+
+  useEffect(()=>{
+    context.setisHeaderFooterShow(true)
+  },[])
   return (
     <>
       <HomeBanner />

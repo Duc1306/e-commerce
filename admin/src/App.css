@@ -2,7 +2,7 @@
 
 body {
   font-family: "Open Sans", sans-serif !important;
-  background: #ebe9e9;
+  background: #ebe9e9 !important;
   overflow-x: hidden;
 }
 
@@ -20,11 +20,7 @@ body {
 ::-webkit-scrollbar-track {
   background: #0000 !important;
 }
-body {
-  background: #ebe9e9;
-  font-family: Open Sans, sans-serif !important;
-  overflow-x: hidden;
-}
+
 header {
   background: #ffffffe6;
   height: 70px;
@@ -197,6 +193,17 @@ body.light p {
   font-weight: 600 !important;
   text-transform: capitalize !important;
 }
+.btn-lg{
+  padding: 5px 25px !important;
+}
+.btn-big {
+    font-size: 16px !important;
+    padding: 10px 25px !important;
+}
+
+.btn-round{
+  border-radius: 30px !important;
+}
 .main .sidebarWrapper {
   flex: 0 0 20%;
   transition: all 0.3s;
@@ -224,10 +231,18 @@ body.light p {
   margin-bottom: 0;
   padding: 10px 15px;
 }
-
+.main .content.toggle {
+    flex: 0 0 100%;
+    width: 100%;
+}
 .main .sidebarWrapper .sidebar ul li {
   list-style: none;
   margin-bottom: 5px;
+}
+.full {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
 }
 .main .sidebarWrapper .sidebar ul li button {
   align-items: center;
@@ -251,6 +266,13 @@ body.light p {
   justify-content: center;
   margin-right: 10px;
   width: 25px;
+}
+.main .sidebarWrapper.toggle .sidebar {
+    left: -100%;
+}
+.main .sidebarWrapper.toggle {
+    flex: 0 0;
+    width: 0;
 }
 .main .sidebarWrapper .sidebar::-webkit-scrollbar-thumb {
   background: #0000 !important;
@@ -338,8 +360,20 @@ body.light p {
 body.dark .main .sidebarWrapper .sidebar ul .submenu li a:hover {
   color: #0858f7 !important;
 }
+body.dark header button.rounded-circle {
+    background: #112755 !important;
+}
+body.dark header button.rounded-circle svg {
+    color: #fff !important;
+}
+body.dark .searchBox {
+    background: #12254e;
+}
 .logoutWrapper {
   padding: 0 25px;
+}
+body.dark .main .sidebarWrapper .sidebar {
+    background: #112143 !important;
 }
 .logoutWrapper .logoutBox {
   align-items: center;
@@ -482,6 +516,9 @@ body.dark .main .sidebarWrapper .sidebar ul .submenu li a:hover {
     font-size: 18px;
     font-weight: 700;
 }
+h1, h2, h3, h4, h5, h6, p {
+    color: #403e57;
+}
 .cardFilters .col-md-3 h4 {
     color: rgb(64, 62, 87);
     font-size: 14px;
@@ -604,4 +641,176 @@ table.v-align td {
 }
 .tableFooter .pagination {
     margin-left: auto;
+}
+
+.loginPatern {
+    height: 100%;
+    left: 0;
+    opacity: .1;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+.loginSection {
+    background: #fff;
+    height: 100vh;
+    padding: 35px 25px;
+    position: relative;
+    width: 100%;
+}
+.loginSection .loginBox {
+    height: auto;
+    margin: auto;
+    width: 350px;
+}
+.logo img {
+    width: 45px;
+}
+.logo span {
+    color: #292929;
+    font-size: 24px;
+    font-weight: 800;
+}
+.loginSection .loginBox .wrapper {
+    background: #f0f0f0;
+    height: auto;
+    padding: 35px;
+    position: relative;
+    width: 100%;
+    z-index: 100;
+}
+.loginSection .loginBox .wrapper .form-group {
+    margin-bottom: 18px;
+}
+.loginSection .loginBox .wrapper .form-group .icon {
+    font-size: 23px;
+    left: 10px;
+    position: absolute;
+    top: 3px;
+    z-index: 100;
+}
+.loginSection .loginBox .wrapper .form-group .icon svg {
+    color: #5e5d72;
+}
+.loginSection .loginBox .wrapper .form-control {
+    background: #fff;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    font-size: 14px;
+    font-weight: 600;
+    height: 45px;
+    outline: none !important;
+    padding-left: 40px;
+}
+.toggleShowPassword {
+    cursor: pointer;
+    position: absolute;
+    right: 8px;
+    top: 10px;
+}
+.toggleShowPassword svg {
+    color: #5e5d72;
+    font-size: 22px;
+}
+form .btn-blue {
+    position: relative;
+    z-index: 100;
+}
+.loginSection .loginBox .wrapper .link {
+    font-size: 14px;
+}
+.link {
+    color: #5e5d72;
+    font-weight: 800;
+}
+.loginSection .loginBox .wrapper .or span.line {
+    background: #0003;
+    display: block;
+    height: 1px;
+    width: 35%;
+}
+.loginSection .loginBox .wrapper .or span.txt {
+    align-items: center;
+    border: 1px solid #0003;
+    border-radius: 50%;
+    display: flex
+;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+}
+.loginSection .loginBox .wrapper .or span.line {
+    background: #0003;
+    display: block;
+    height: 1px;
+    width: 35%;
+}
+.link.color, .link:hover {
+    color: #0858f7 !important;
+    text-decoration: none;
+}
+.loginWithGoogle {
+    font-weight: 700 !important;
+    text-transform: capitalize !important;
+}
+.loginSection .loginBox .wrapper .form-control:focus{
+  border: 1px solid #0858f7!important;
+}
+.loginSection .loginBox .wrapper .form-group.focus .icon svg{
+  color: #0858f7 !important;
+}
+
+.signUpSection {
+    background: #f1f1f1 !important;
+    height: auto !important;
+    padding: 0;
+}
+.signUpSection .part1 {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.signUpSection .part1 h1 {
+    font-size: 50px;
+    font-weight: 800;
+}
+.signUpSection .part1 p {
+    font-size: 18px;
+    font-weight: 500;
+}
+.btn-blue svg {
+    color: #fff !important;
+}
+.signUpSection .part1 h1 span {
+    font-weight: 800 !important;
+}
+.text-sky {
+    color: #0858f7 !important;
+    font-weight: 500 !important;
+}
+h1, h2, h3, h4, h5, h6, p {
+    color: #201f2f;
+}
+.btn-big svg {
+    font-size: 25px !important;
+}
+.signUpSection .loginBox {
+    background: #e4e4e4 !important;
+    padding: 25px 5px !important;
+    position: relative;
+    width: 100% !important;
+    z-index: 100;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.signUpSection .loginBox .wrapper {
+    background: #0000 !important;
+    border: 0 !important;
+    padding-top: 10px !important;
 }
