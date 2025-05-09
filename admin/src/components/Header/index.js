@@ -23,7 +23,7 @@ const Header = () => {
   const [isOpennotifications, setisOpennotifications] = useState(false);
   const openMyAcc = Boolean(anchorEl);
   const openNotification = Boolean(isOpennotifications);
-  const context =useContext(MyContext)
+  const context = useContext(MyContext);
   const handleOpenMyAccDrop = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -63,8 +63,11 @@ const Header = () => {
               <SearchBox />
             </div>
             <div className="col-sm-7 d-flex align-items-center justify-content-end part3">
-              <Button className="rounded-circle mr-3">
-                <MdOutlineLightMode />
+              <Button
+                className="rounded-circle mr-3"
+                onClick={() => context.setthemeMode(!context.themeMode)}
+              >
+                {context.themeMode ? <MdOutlineLightMode /> : <MdDarkMode />}
               </Button>
               <div className="dropdownWrapper position-relative">
                 <Button
@@ -200,9 +203,7 @@ const Header = () => {
 
               {context.isLogin !== true ? (
                 <Link to={"/login"}>
-                  <Button className="btn-blue btn-round btn-lg">
-                    Sign In
-                  </Button>
+                  <Button className="btn-blue btn-round btn-lg">Sign In</Button>
                 </Link>
               ) : (
                 <div className="myAccWrapper">

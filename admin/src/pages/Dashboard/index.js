@@ -54,6 +54,8 @@ const Dashboard = () => {
 
   useEffect(()=>{
     context.setisHeaderSidebarShow(false)
+
+    window.scrollTo(0,0);
   },[])
   return (
     <>

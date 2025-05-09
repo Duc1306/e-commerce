@@ -7,6 +7,11 @@ import Sidebar from "./components/Siderbar";
 import { createContext, useState } from "react";
 import Login from "./pages/Login";
 import SignUp from "./pages/signUp";
+import {useEffect} from 'react'
+import Products from "./pages/Products";
+import ProductDetails from "./pages/ProductDetails";
+import ProducUpload from "./pages/ProductUpload";
+import "./responsive.css"
 
 const MyContext = createContext();
 
@@ -14,6 +19,20 @@ function App() {
   const [isToggleSidebar ,setIsToggleSidebar ] =useState(false)
   const [isLogin, setIsLogin] = useState(false);
     const [isHeaderSidebarShow,setisHeaderSidebarShow] =useState(false)
+    const [themeMode ,setthemeMode]= useState(true)
+
+   useEffect(()=>{
+    if(themeMode===true){
+      document.body.classList.remove("dark");
+       document.body.classList.add("light");
+       localStorage.setItem("themeMode", "light");
+    }else{
+      document.body.classList.remove("light");
+      document.body.classList.add("dark");
+      localStorage.setItem("themeMode", "dark");
+    }
+   
+   },[themeMode])
 
   const values = {
     isToggleSidebar,
@@ -22,6 +41,8 @@ function App() {
     setisHeaderSidebarShow,
     isLogin,
     setIsLogin,
+    themeMode,
+    setthemeMode,
   };
   return (
     <BrowserRouter>
@@ -30,6 +51,7 @@ function App() {
 
         <div className="main d-flex">
           {isHeaderSidebarShow !== true && (
+            
             <div
               className={`sidebarWrapper ${
                 isToggleSidebar === true ? "toggle" : ""
@@ -49,6 +71,9 @@ function App() {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signUp" element={<SignUp />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/product/details" element={<ProductDetails />} />
+              <Route path="/product/upload" element={<ProducUpload />} />
             </Routes>
           </div>
         </div>
