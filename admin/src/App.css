@@ -554,7 +554,7 @@ body.dark .signUpSection .loginBox {
 }
 
 .right-content {
-  padding: 90px 30px 10px;
+  padding: 78px 30px 10px;
 }
 .dashboardBoxWrapper {
   flex-wrap: wrap;
@@ -1283,4 +1283,8 @@ body.dark .imgUploadBox .uploadBox * {
 }
 body.dark .imgUploadBox .uploadBox {
   background: #2b3c5f;
+}
+
+.actions button.success {
+  background-color: rgb(39, 191, 104) !important;
 }

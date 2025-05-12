@@ -274,7 +274,7 @@ const ProducUpload = () => {
                 </div>
               </div>
               <br />
-              <Button className="btn-blue vtb-lg btn-big w-100">
+              <Button className="btn-blue btn-lg btn-big w-100">
                 <FaCloudUploadAlt /> &nbsp; PUBLISH AND VIEW
               </Button>
             </div>

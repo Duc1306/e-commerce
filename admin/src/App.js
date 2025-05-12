@@ -12,6 +12,9 @@ import Products from "./pages/Products";
 import ProductDetails from "./pages/ProductDetails";
 import ProducUpload from "./pages/ProductUpload";
 import "./responsive.css"
+import CategoryAdd from "./pages/CategoryAdd";
+import Category from "./pages/Category";
+import CategoryEdit from "./pages/CategoryEdit";
 
 const MyContext = createContext();
 
@@ -50,8 +53,8 @@ function App() {
         {isHeaderSidebarShow !== true && <Header />}
 
         <div className="main d-flex">
+          <div className="sidebarOverlay d-none false"></div>
           {isHeaderSidebarShow !== true && (
-            
             <div
               className={`sidebarWrapper ${
                 isToggleSidebar === true ? "toggle" : ""
@@ -74,6 +77,9 @@ function App() {
               <Route path="/products" element={<Products />} />
               <Route path="/product/details" element={<ProductDetails />} />
               <Route path="/product/upload" element={<ProducUpload />} />
+              <Route path="/category" element={<Category />} />
+              <Route path="/category/add" element={<CategoryAdd />} />
+              <Route path="/category/edit/:id" element={<CategoryEdit />} />
             </Routes>
           </div>
         </div>

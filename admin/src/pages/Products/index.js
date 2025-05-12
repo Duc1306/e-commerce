@@ -66,7 +66,7 @@ const Products = () => {
   const ITEM_HEIGHT = 48;
   return (
     <div className="right-content w-100">
-      <div className="card shadow border-0 w-100 flex-row p-4">
+      <div className="card shadow border-0 w-100 flex-row p-4 align-items-center">
         <h5 className="mb-0">Product List</h5>
 
         <Breadcrumbs aria-label="breadcrumb" className="ml-auto breadcrumbs_">

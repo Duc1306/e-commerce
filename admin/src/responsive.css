@@ -1,2 +1,75 @@
 @media only screen and (min-width: 320px) and (max-width: 992px) {
+  .sidebarOverlay {
+    background: #000000b3;
+    height: 100% !important;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    z-index: 1000;
+  }
+  .main .sidebarWrapper {
+    height: 100vh !important;
+    left: -100%;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+    width: 80% !important;
+    z-index: 10000;
+  }
+  .main .sidebarWrapper .sidebar {
+    max-height: inherit !important;
+    position: relative !important;
+    top: 0 !important;
+    width: 100% !important;
+  }
+
+  .main .content {
+    flex: 0 0 100% !important;
+  }
+  .main .content,
+  .searchBox,
+  .searchWrap {
+    width: 100% !important;
+  }
+
+  .right-content {
+    padding: 90px 15px !important;
+  }
+  .dashboardBoxWrapperRow {
+    margin-bottom: 0;
+    padding-top: 0 !important;
+  }
+  .dashboardBoxWrapper
+  
+   {
+          display: block !important;
+          margin-bottom: 20px !important;
+          overflow-x: scroll;
+          overflow-y: hidden;
+          white-space: nowrap !important;
+      }
+      .dashboardBoxWrapper .dashboardBox
+      
+       {
+              display: inline-block !important;
+              height: 118px !important;
+              margin-right: 10px !important;
+              width: 270px !important;
+          }
+
+  .card.shadow.border-0.p-3.mt-4,
+  .card.shadow.border-0.w-100.flex-row {
+    margin-top: 0 !important;
+  }
+  .searchWrap {
+    margin-top: 10px !important;
+}
+.chartWrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+}
 }
